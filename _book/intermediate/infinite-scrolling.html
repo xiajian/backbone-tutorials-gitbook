@@ -1,0 +1,457 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Infinite Scrolling using Twitter API | 介绍</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../intermediate/nodejs-restify-mongodb-mongoose.html" />
+    
+    
+    <link rel="prev" href="../intermediate/cross-domain-sessions.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="2.5"
+        data-chapter-title="Infinite Scrolling using Twitter API"
+        data-filepath="intermediate/infinite-scrolling.md"
+        data-basepath=".."
+        data-revision="Sat Apr 23 2016 21:50:51 GMT+0800 (CST)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Introduction
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" >
+            
+            <span><b>1.</b> Beginners</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="beginner/why-would-you-use-backbone.html">
+            
+                
+                    <a href="../beginner/why-would-you-use-backbone.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        Why would you use Backbone.js?
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="beginner/what-is-a-model.html">
+            
+                
+                    <a href="../beginner/what-is-a-model.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        What is a model?
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="beginner/what-is-a-view.html">
+            
+                
+                    <a href="../beginner/what-is-a-view.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        What is a view?
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="beginner/what-is-a-router.html">
+            
+                
+                    <a href="../beginner/what-is-a-router.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        What is a router?
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="beginner/what-is-a-collection.html">
+            
+                
+                    <a href="../beginner/what-is-a-collection.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.5.</b>
+                        
+                        What is a collection?
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" >
+            
+            <span><b>2.</b> Intermediate</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="intermediate/real-time-backbone-with-pubnub.html">
+            
+                
+                    <a href="../intermediate/real-time-backbone-with-pubnub.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        Real-Time Backbone With PubNub
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="intermediate/seo-for-single-page-apps.html">
+            
+                
+                    <a href="../intermediate/seo-for-single-page-apps.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        SEO for single page applications
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="intermediate/organizing-backbone-using-modules.html">
+            
+                
+                    <a href="../intermediate/organizing-backbone-using-modules.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        Organizing your application using Modules (require.js)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="intermediate/cross-domain-sessions.html">
+            
+                
+                    <a href="../intermediate/cross-domain-sessions.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        Cross-domain Backbone.js with sessions using CORS Lightweight
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.5" data-path="intermediate/infinite-scrolling.html">
+            
+                
+                    <a href="../intermediate/infinite-scrolling.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.</b>
+                        
+                        Infinite Scrolling using Twitter API
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="intermediate/nodejs-restify-mongodb-mongoose.html">
+            
+                
+                    <a href="../intermediate/nodejs-restify-mongodb-mongoose.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.6.</b>
+                        
+                        Simple example - Node.js, Restify, MongoDb and Mongoose
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >介绍</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="lightweight-infinite-scrolling-using-twitter-api">Lightweight Infinite Scrolling using Twitter API</h1>
+<h2 id="getting-started">Getting started</h2>
+<p>In this example we are going to build a widget that pulls in tweets and when the user scrolls to the bottom of the widget Backbone.js will re-sync with the server to bring down the next page of results.</p>
+<p><a href="http://backbonetutorials.com/examples/infinite-scroll/" target="_blank">Example Demo</a></p>
+<p><a href="https://github.com/thomasdavis/backbonetutorials/tree/gh-pages/examples/infinite-scroll" target="_blank">Example Source</a></p>
+<p><em>Note: This tutorial will use <a href="http://backbonetutorials.com/organizing-backbone-using-modules" target="_blank">AMD</a> for modularity.</em></p>
+<h2 id="the-twitter-collection">The Twitter Collection</h2>
+<p>Twitter offers a jsonp API for browsing tweets.  The first thing to note is that we have to append &apos;&amp;callback?&apos; to allow cross domain Ajax calls which is a feature of <a href="http://en.wikipedia.org/wiki/JSONP" target="_blank">jsonp</a>.</p>
+<p>Using the &apos;q&apos; and &apos;page&apos; query parameters we can find the results we are after.  In the collection definition below we have set some defaults which can be overridden at any point.</p>
+<p>Twitter&apos;s search API actually returns a whole bunch of meta information alongside the results.  Though this is a problem for Backbone.js because a Collection expects to be populated with an array of objects. So in our collection definition we can override the Backbone.js default parse function to instead choose the correct property to populate the collection.  </p>
+<pre><code>// collections/twitter.js
+define([
+  &apos;jquery&apos;,
+  &apos;underscore&apos;,
+  &apos;backbone&apos;
+], function($, _, Backbone){
+  var Tweets = Backbone.Collection.extend({
+    url: function () {
+      return &apos;http://search.twitter.com/search.json?q=&apos; + this.query + &apos;&amp;page=&apos; + this.page + &apos;&amp;callback=?&apos;
+    },
+    // Because twitter doesn&apos;t return an array of models by default we need
+    // to point Backbone.js at the correct property
+    parse: function(resp, xhr) {
+      return resp.results;
+    },
+    page: 1,
+    query: &apos;backbone.js tutorials&apos;
+  });
+
+  return Tweets;
+});
+</code></pre><p><em>Note: Feel free to attach the meta information returned by Twitter to the collection itself e.g.</em></p>
+<pre><code>parse: function(resp, xhr) {
+  this.completed_in = resp.completed_in
+  return resp.results;
+},
+</code></pre><h2 id="setting-up-the-view">Setting up the View</h2>
+<p>The first thing to do is to load our Twitter collection and template into the widget module. We should attach our collection to our view in our <code>initialize</code> function. <code>loadResults</code> will be responsible for calling fetch on our Twitter collection. On success we will append the latest results to our widget using our template. Our Backbone.js <code>events</code> will listen for <code>scroll</code> on the current <code>el</code> of the view which is &apos;.twitter-widget&apos;. If the current <code>scrollTop</code> is at the bottom then we simply increment the Twitter collections current page property and call <code>loadResults</code> again.</p>
+<pre><code>// views/twitter/widget.js
+define([
+  &apos;jquery&apos;,
+  &apos;underscore&apos;,
+  &apos;backbone&apos;,
+  &apos;vm&apos;,
+  &apos;collections/twitter&apos;,
+  &apos;text!templates/twitter/list.html&apos;
+], function($, _, Backbone, Vm, TwitterCollection, TwitterListTemplate){
+  var TwitterWidget = Backbone.View.extend({
+    el: &apos;.twitter-widget&apos;,
+    initialize: function () {
+      // isLoading is a useful flag to make sure we don&apos;t send off more than
+      // one request at a time
+      this.isLoading = false;
+      this.twitterCollection = new TwitterCollection();
+    },
+    render: function () {
+      this.loadResults();
+    },
+    loadResults: function () {
+      var that = this;
+      // we are starting a new load of results so set isLoading to true
+      this.isLoading = true;
+      // fetch is Backbone.js native function for calling and parsing the collection url
+      this.twitterCollection.fetch({ 
+        success: function (tweets) {
+          // Once the results are returned lets populate our template
+          $(that.el).append(_.template(TwitterListTemplate, {tweets: tweets.models, _:_}));
+          // Now we have finished loading set isLoading back to false
+          that.isLoading = false;
+        }
+      });      
+    },
+    // This will simply listen for scroll events on the current el
+    events: {
+      &apos;scroll&apos;: &apos;checkScroll&apos;
+    },
+    checkScroll: function () {
+      var triggerPoint = 100; // 100px from the bottom
+        if( !this.isLoading &amp;&amp; this.el.scrollTop + this.el.clientHeight + triggerPoint &gt; this.el.scrollHeight ) {
+          this.twitterCollection.page += 1; // Load next page
+          this.loadResults();
+        }
+    }
+  });
+  return TwitterWidget;
+});
+</code></pre><p><em>Note: <code>triggerPoint</code> will allow you to set an offset where the user has to scroll to before loading the next page</em></p>
+<h2 id="the-widget-template">The widget template</h2>
+<p>Our view above passes into our underscore template the variable tweets which we can simply iterate over with using underscore&apos;s <code>each</code> method.</p>
+<pre><code>&lt;!-- templates/twitter/list.html --&gt;
+&lt;ul class=&quot;tweets&quot;&gt;
+&lt;% _.each(tweets, function (tweet) { %&gt;
+
+  &lt;li&gt;&lt;%= tweet.get(&apos;text&apos;) %&gt;&lt;/li&gt; 
+
+&lt;% }); %&gt;
+&lt;/ul&gt;
+</code></pre><h2 id="conclusion">Conclusion</h2>
+<p>This is a very lightweight but robust infinite scroll example. There are caveats to using infinite scroll in UI/UX so make sure to only use it when applicable.</p>
+<p><a href="http://backbonetutorials.com/examples/infinite-scroll/" target="_blank">Example Demo</a></p>
+<p><a href="https://github.com/thomasdavis/backbonetutorials/tree/gh-pages/examples/infinite-scroll" target="_blank">Example Source</a></p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../intermediate/cross-domain-sessions.html" class="navigation navigation-prev " aria-label="Previous page: Cross-domain Backbone.js with sessions using CORS Lightweight"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../intermediate/nodejs-restify-mongodb-mongoose.html" class="navigation navigation-next " aria-label="Next page: Simple example - Node.js, Restify, MongoDb and Mongoose"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

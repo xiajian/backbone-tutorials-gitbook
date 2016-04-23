@@ -1,0 +1,542 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Simple example - Node.js, Restify, MongoDb and Mongoose | 介绍</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    
+    <link rel="prev" href="../intermediate/infinite-scrolling.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="2.6"
+        data-chapter-title="Simple example - Node.js, Restify, MongoDb and Mongoose"
+        data-filepath="intermediate/nodejs-restify-mongodb-mongoose.md"
+        data-basepath=".."
+        data-revision="Sat Apr 23 2016 21:50:51 GMT+0800 (CST)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Introduction
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" >
+            
+            <span><b>1.</b> Beginners</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="beginner/why-would-you-use-backbone.html">
+            
+                
+                    <a href="../beginner/why-would-you-use-backbone.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        Why would you use Backbone.js?
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="beginner/what-is-a-model.html">
+            
+                
+                    <a href="../beginner/what-is-a-model.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        What is a model?
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="beginner/what-is-a-view.html">
+            
+                
+                    <a href="../beginner/what-is-a-view.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        What is a view?
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="beginner/what-is-a-router.html">
+            
+                
+                    <a href="../beginner/what-is-a-router.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        What is a router?
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="beginner/what-is-a-collection.html">
+            
+                
+                    <a href="../beginner/what-is-a-collection.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.5.</b>
+                        
+                        What is a collection?
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" >
+            
+            <span><b>2.</b> Intermediate</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="intermediate/real-time-backbone-with-pubnub.html">
+            
+                
+                    <a href="../intermediate/real-time-backbone-with-pubnub.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        Real-Time Backbone With PubNub
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="intermediate/seo-for-single-page-apps.html">
+            
+                
+                    <a href="../intermediate/seo-for-single-page-apps.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        SEO for single page applications
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="intermediate/organizing-backbone-using-modules.html">
+            
+                
+                    <a href="../intermediate/organizing-backbone-using-modules.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        Organizing your application using Modules (require.js)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="intermediate/cross-domain-sessions.html">
+            
+                
+                    <a href="../intermediate/cross-domain-sessions.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        Cross-domain Backbone.js with sessions using CORS Lightweight
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="intermediate/infinite-scrolling.html">
+            
+                
+                    <a href="../intermediate/infinite-scrolling.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.</b>
+                        
+                        Infinite Scrolling using Twitter API
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.6" data-path="intermediate/nodejs-restify-mongodb-mongoose.html">
+            
+                
+                    <a href="../intermediate/nodejs-restify-mongodb-mongoose.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.6.</b>
+                        
+                        Simple example - Node.js, Restify, MongoDb and Mongoose
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >介绍</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="simple-example--nodejs-restify-mongodb-and-mongoose">Simple example - Node.js, Restify, MongoDb and Mongoose</h1>
+<p>Before I start, the Backbone.js parts of this tutorial will be using techniques described in &quot;Organizing your application using <a href="http://backbonetutorials.com/organizing-backbone-using-modules/" target="_blank">Modules</a> to construct a simple guestbook.</p>
+<h2 id="getting-started">Getting started</h2>
+<p>To easily understand this tutorial you should jump straight into the example code base.</p>
+<p><a href="https://github.com/thomasdavis/backbonetutorials/tree/gh-pages/examples/nodejs-mongodb-mongoose-restify" target="_blank">Example Codebase</a></p>
+<p><a href="http://backbonetutorials.com/examples/nodejs-mongodb-mongoose-restify/app" target="_blank">Example Demo</a></p>
+<p>This tutorial will assist you in saving data(Backbone.js Models) to MongoDb and retrieving a list(Backbone.js Collections) of them back.</p>
+<h2 id="the-technologies">The technologies</h2>
+<p>This stack is great for rapid prototyping and highly intuitive. Personal note: I love using JavaScript as my only language for the entire application (FrontEnd/BackEnd/API/Database). Restify is still in early development but is essentially just an extension of Express. So for anyone needing more stability you can easily just substitute Express in.</p>
+<h3 id="nodejs">Node.js</h3>
+<p>&quot;Node.js is a platform built on Chrome&apos;s JavaScript runtime for easily building fast, scalable network applications. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient, perfect for data-intensive real-time applications that run across distributed devices.&quot;</p>
+<h3 id="restify">Restify</h3>
+<p>&quot;Restify is a node.js module built specifically to enable you to build correct REST web services. It borrows heavily from express (intentionally) as that is more or less the de facto API for writing web applications on top of node.js.&quot;</p>
+<h3 id="mongodb">MongoDb</h3>
+<p>&quot;MongoDB (from &quot;humongous&quot;) is a scalable, high-performance, open source NoSQL database.&quot;</p>
+<h3 id="mongoose">Mongoose</h3>
+<p>&quot;Mongoose is a MongoDB object modeling tool designed to work in an asynchronous environment.&quot;</p>
+<h2 id="building-the-server">Building the server</h2>
+<p>In the example repository there is a server.js example which can be executed by running <code>node server.js</code>. If you use this example in your own applications make sure to update the Backbone.js <a href="https://github.com/thomasdavis/backbonetutorials/blob/gh-pages/examples/nodejs-mongodb-mongoose-restify/js/models/message.js" target="_blank">Model</a> and <a href="https://github.com/thomasdavis/backbonetutorials/blob/gh-pages/examples/nodejs-mongodb-mongoose-restify/js/collections/messages.js" target="_blank">Collection</a> definitions to match your server address.</p>
+<h2 id="restify-configuration">Restify configuration</h2>
+<p>The first thing to do is require the Restify module. Restify will be in control of handling our restful endpoints and returning the appropriate JSON.</p>
+<pre><code>var restify = require(&apos;restify&apos;);  
+var server = restify.createServer();
+server.use(restify.bodyParser());
+</code></pre><p>Note: bodyParser() takes care of turning your request data into a JavaScript object on the server automatically.</p>
+<h2 id="mongodbmongoose-configuration">MongoDb/Mongoose configuration</h2>
+<p>We simply want to require the MongoDb module and pass it a MongoDb authentication URI  e.g. mongodb://username:server@mongoserver:10059/somecollection</p>
+<p>The code below presupposes you have another file in the same directory called <code>config.js</code>. Your config should never be public as it contains your credentials. So for this repository I have added <code>config.js</code> to my <code>.gitignore</code> but added in a <a href="https://github.com/thomasdavis/backbonetutorials/blob/gh-pages/examples/nodejs-mongodb-mongoose-restify/config-sample.js" target="_blank">sample config</a>.</p>
+<pre><code>var mongoose = require(&apos;mongoose/&apos;);
+var config = require(&apos;./config&apos;);
+db = mongoose.connect(config.creds.mongoose_auth),
+Schema = mongoose.Schema;
+</code></pre><h2 id="mongoose-schema">Mongoose Schema</h2>
+<p>Mongoose introduces a concept of <a href="http://mongoosejs.com/docs/model-definition.html" target="_blank">model/schema</a> enforcing types which allow for easier input validation etc</p>
+<pre><code>// Create a schema for our data
+var MessageSchema = new Schema({
+  message: String,
+  date: Date
+});
+// Use the schema to register a model with MongoDb
+mongoose.model(&apos;Message&apos;, MessageSchema); 
+var Message = mongoose.model(&apos;Message&apos;);
+</code></pre><p><em>Note: <code>Message</code> can now be used for all things CRUD related.</em></p>
+<h2 id="setting-up-the-routes">Setting up the routes</h2>
+<p>Just like in Backbone, Restify allows you to configure different routes and their associated callbacks. In the code below we define two routes.  One for saving new messages and one for retrieving all messages. After we have created our function definitions, we attach them to either GET/POST/PUT/DELETE on a particular restful endpoint e.g. GET /messages</p>
+<pre><code>// This function is responsible for returning all entries for the Message model
+function getMessages(req, res, next) {
+  // Resitify currently has a bug which doesn&apos;t allow you to set default headers
+  // This headers comply with CORS and allow us to server our response to any origin
+  res.header(&quot;Access-Control-Allow-Origin&quot;, &quot;*&quot;); 
+  res.header(&quot;Access-Control-Allow-Headers&quot;, &quot;X-Requested-With&quot;);
+  // .find() without any arguments, will return all results
+  // the `-1` in .sort() means descending order
+  Message.find().sort(&apos;date&apos;, -1).execFind(function (arr,data) {
+    res.send(data);
+  });
+}
+
+
+
+function postMessage(req, res, next) {
+  res.header(&quot;Access-Control-Allow-Origin&quot;, &quot;*&quot;);
+  res.header(&quot;Access-Control-Allow-Headers&quot;, &quot;X-Requested-With&quot;);
+  // Create a new message model, fill it up and save it to Mongodb
+  var message = new Message();
+  message.message = req.params.message;
+  message.date = new Date();
+  message.save(function () {
+    res.send(req.body);
+  });
+}
+
+// Set up our routes and start the server
+server.get(&apos;/messages&apos;, getMessages);
+server.post(&apos;/messages&apos;, postMessage);
+</code></pre><p>This wraps up the server side of things, if you follow the <a href="https://github.com/thomasdavis/backbonetutorials/blob/gh-pages/examples/nodejs-mongodb-mongoose-restify/server.js" target="_blank">example</a> then you should see something like</p>
+<p><a href="http://backbonetutorials.nodejitsu.com/messages" target="_blank">http://backbonetutorials.nodejitsu.com/messages</a></p>
+<p><em>Note: Again you must remember to change the <a href="https://github.com/thomasdavis/backbonetutorials/blob/gh-pages/examples/nodejs-mongodb-mongoose-restify/js/models/message.js" target="_blank">Model</a> and <a href="https://github.com/thomasdavis/backbonetutorials/blob/gh-pages/examples/nodejs-mongodb-mongoose-restify/js/collections/messages.js" target="_blank">Collection</a> definitions to match your server address.</em></p>
+<h2 id="setting-up-the-client-backbonejs">Setting up the client (Backbone.js)</h2>
+<p>I&apos;ve actually used the latest copy of <a href="http://backboneboilerplate.com" target="_blank">http://backboneboilerplate.com</a> to set up the example page.</p>
+<p>The important files you will want to check out are;</p>
+<ul>
+<li>views/dashboard/page.js</li>
+<li>views/guestbook/form.js</li>
+<li>views/guestbook/list.js</li>
+<li>models/message.js</li>
+<li>collections/messages.js</li>
+<li>templates/guestbook/</li>
+</ul>
+<h2 id="saving-a-message">Saving a message</h2>
+<p>First of all we want to setup a <a href="https://github.com/thomasdavis/backbonetutorials/blob/gh-pages/examples/nodejs-mongodb-mongoose-restify/templates/guestbook/form.html" target="_blank">template</a> for showing our form that creates new messages.</p>
+<pre><code>&lt;textarea class=&quot;message&quot;&gt;&lt;/textarea&gt;
+&lt;button class=&quot;post-message&quot;&gt;Post Message&lt;/button&gt;
+</code></pre><p>This template gets inserted into the DOM by <code>views/guestbook/form.js</code>, this Backbone view also handles the interaction of the form and the posting of the new data.</p>
+<p>Let us create a Backbone Model that has the correct URL for our restful interface.</p>
+<pre><code>define([
+  &apos;underscore&apos;,
+  &apos;backbone&apos;
+], function(_, Backbone) {
+  var Message = Backbone.Model.extend({
+      url: &apos;http://localhost:8080/messages&apos;
+  });
+  return Message;
+});
+</code></pre><p>We can see how we require our predefined model for messages and also our form template.</p>
+<pre><code>define([
+  &apos;jquery&apos;,
+  &apos;underscore&apos;,
+  &apos;backbone&apos;,
+  &apos;models/message&apos;,
+  &apos;text!templates/guestbook/form.html&apos;
+], function($, _, Backbone, MessageModel, guestbookFormTemplate){
+  var GuestbookForm = Backbone.View.extend({
+    el: &apos;.guestbook-form-container&apos;,
+    render: function () {
+      $(this.el).html(guestbookFormTemplate);
+
+    },
+    events: {
+      &apos;click .post-message&apos;: &apos;postMessage&apos;
+    },
+    postMessage: function() {
+      var that = this;
+
+      var message = new MessageModel();
+      message.save({ message: $(&apos;.message&apos;).val()}, {
+        success: function () {
+          that.trigger(&apos;postMessage&apos;);
+        }
+      });
+    }
+  });
+  return GuestbookForm;
+});
+</code></pre><p><em>Note: <code>trigger</code> is from Backbone Events, I binded a listener to this view in <code>views/dashboard/page.js</code> so when a new message is submitted, the list is re-rendered. We are setting the date of the POST on the server so there is no need to pass it up.</em></p>
+<h2 id="retrieving-a-list-of-messages">Retrieving a list of messages</h2>
+<p>We setup a route on our server to generate a list of all available messages at <code>GET /messages</code>. So we need to define a collection with the appropriate <code>url</code> to fetch this data down.</p>
+<pre><code>define([
+  &apos;jquery&apos;,
+  &apos;underscore&apos;,
+  &apos;backbone&apos;,
+  &apos;models/message&apos;
+], function($, _, Backbone, MessageModel){
+  var Messages = Backbone.Collection.extend({
+    model: MessageModel, // Generally best practise to bring down a Model/Schema for your collection
+    url: &apos;http://localhost:8080/messages&apos;
+  });
+
+  return Messages;
+});
+</code></pre><p>Now that we have a collection to use we can setup our <code>views/list.js</code> to require the collection and trigger a fetch. Once the fetch is complete we want to render our returned data to a template and insert it into the DOM.</p>
+<pre><code>define([
+  &apos;jquery&apos;,
+  &apos;underscore&apos;,
+  &apos;backbone&apos;,
+  &apos;collections/messages&apos;,
+  &apos;text!templates/guestbook/list.html&apos;
+], function($, _, Backbone, MessagesCollection, guestbookListTemplate){
+  var GuestbookList = Backbone.View.extend({
+    el: &apos;.guestbook-list-container&apos;,
+    render: function () {
+      var that = this;
+      var messages = new MessagesCollection();
+      messages.fetch({
+        success: function(messages) {
+          $(that.el).html(_.template(guestbookListTemplate, {messages: messages.models, _:_}));
+        }
+      });
+    }
+  });
+  return GuestbookList;
+});
+</code></pre><p>The template file should iterate over <code>messages.models</code> which is an array and print out a HTML fragment for each model.</p>
+<pre><code>&lt;% _.each(messages, function(message) { %&gt;
+
+&lt;p&gt;&lt;%= message.get(&apos;message&apos;) %&gt;&lt;/p&gt;
+&lt;em&gt;&lt;%= message.get(&apos;date&apos;) %&gt;&lt;/em&gt;
+
+&lt;% }); %&gt;
+</code></pre><p>This actually sums up everything you need to know to implement this simple example.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p><a href="https://github.com/thomasdavis/backbonetutorials/tree/gh-pages/examples/nodejs-mongodb-mongoose-restify" target="_blank">Example Codebase</a></p>
+<p><a href="http://backbonetutorials.com/examples/nodejs-mongodb-mongoose-restify/app" target="_blank">Example Demo</a></p>
+<p>In this example you should really be using relative URL&apos;s in your collections/models and instead setting a baseUrl in a config file or by placing your index.html file on the restful server.</p>
+<p>This example is hosted on GitHub therefore we had to include the absolute URL to the server which is hosted on nodejitsu.com</p>
+<p>On a personal note, I have of recent used the Joyent, Nodejitsu, MongoDbHq stack after they have now partnered up and I have nothing but good things to say. Highly recommend you check it out!</p>
+<p>As always I hope I made this tutorial easy to follow!</p>
+<p>Get in touch with me on twitter, comments or GitHub!</p>
+<h3 id="relevant-links">Relevant Links</h3>
+<p><a href="http://weblog.bocoup.com/organizing-your-backbone-js-application-with-modules" target="_blank">Organizing Your Backbone.js Application With Modules</a></p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../intermediate/infinite-scrolling.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Infinite Scrolling using Twitter API"><i class="fa fa-angle-left"></i></a>
+        
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

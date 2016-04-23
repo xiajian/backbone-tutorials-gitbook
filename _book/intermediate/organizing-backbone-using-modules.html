@@ -1,0 +1,650 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Organizing your application using Modules (require.js) | 介绍</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../intermediate/cross-domain-sessions.html" />
+    
+    
+    <link rel="prev" href="../intermediate/seo-for-single-page-apps.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="2.3"
+        data-chapter-title="Organizing your application using Modules (require.js)"
+        data-filepath="intermediate/organizing-backbone-using-modules.md"
+        data-basepath=".."
+        data-revision="Sat Apr 23 2016 21:50:51 GMT+0800 (CST)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Introduction
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" >
+            
+            <span><b>1.</b> Beginners</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="beginner/why-would-you-use-backbone.html">
+            
+                
+                    <a href="../beginner/why-would-you-use-backbone.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        Why would you use Backbone.js?
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="beginner/what-is-a-model.html">
+            
+                
+                    <a href="../beginner/what-is-a-model.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        What is a model?
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="beginner/what-is-a-view.html">
+            
+                
+                    <a href="../beginner/what-is-a-view.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        What is a view?
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="beginner/what-is-a-router.html">
+            
+                
+                    <a href="../beginner/what-is-a-router.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        What is a router?
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="beginner/what-is-a-collection.html">
+            
+                
+                    <a href="../beginner/what-is-a-collection.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.5.</b>
+                        
+                        What is a collection?
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" >
+            
+            <span><b>2.</b> Intermediate</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="intermediate/real-time-backbone-with-pubnub.html">
+            
+                
+                    <a href="../intermediate/real-time-backbone-with-pubnub.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        Real-Time Backbone With PubNub
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="intermediate/seo-for-single-page-apps.html">
+            
+                
+                    <a href="../intermediate/seo-for-single-page-apps.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        SEO for single page applications
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.3" data-path="intermediate/organizing-backbone-using-modules.html">
+            
+                
+                    <a href="../intermediate/organizing-backbone-using-modules.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        Organizing your application using Modules (require.js)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="intermediate/cross-domain-sessions.html">
+            
+                
+                    <a href="../intermediate/cross-domain-sessions.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        Cross-domain Backbone.js with sessions using CORS Lightweight
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="intermediate/infinite-scrolling.html">
+            
+                
+                    <a href="../intermediate/infinite-scrolling.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.</b>
+                        
+                        Infinite Scrolling using Twitter API
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="intermediate/nodejs-restify-mongodb-mongoose.html">
+            
+                
+                    <a href="../intermediate/nodejs-restify-mongodb-mongoose.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.6.</b>
+                        
+                        Simple example - Node.js, Restify, MongoDb and Mongoose
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >介绍</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="organizing-your-application-using-modules-requirejs">Organizing your application using Modules (require.js)</h1>
+<p>Unfortunately Backbone.js does not tell you how to organize your code, leaving many developers in the dark regarding how to load scripts and lay out their development environments.</p>
+<p>This was quite a different decision to other JavaScript MVC frameworks who were more in favor of setting a development philosophy.</p>
+<p>Hopefully this tutorial will allow you to build  a much more robust project with great separation of concerns between design and code.</p>
+<p>This tutorial will get you started on combining Backbone.js with <a href="https://github.com/amdjs/amdjs-api/wiki/AMD" target="_blank">AMD</a> (Asynchronous Module Definitions).</p>
+<h2 id="what-is-amd">What is AMD?</h2>
+<p><a href="https://github.com/amdjs/amdjs-api/wiki/AMD" target="_blank">Asynchronous Module Definitions</a> designed to load modular code asynchronously in the browser and server.   It is actually a fork of the Common.js specification.   Many script loaders have built their implementations around AMD, seeing it as the future of modular JavaScript development.</p>
+<p>This tutorial will use <a href="http://requirejs.org" target="_blank">Require.js</a> to implement a modular and organized Backbone.js.</p>
+<p><strong>I highly recommend using AMD for application development</strong></p>
+<p>Quick Overview</p>
+<ul>
+<li>Modular</li>
+<li>Scalable</li>
+<li>Compiles well(see <a href="http://requirejs.org/docs/optimization.html" target="_blank">r.js</a> )</li>
+<li>Market Adoption( <a href="http://dojotoolkit.org/reference-guide/releasenotes/1.6.html" target="_blank">Dojo 1.6 converted fully to AMD</a> )</li>
+</ul>
+<h2 id="why-requirejs">Why Require.js?</h2>
+<p>p. Require.js has a great community and it is growing rapidly.  <a href="http://tagneto.blogspot.com/" target="_blank">James Burke</a> the author is married to Require.js and always responds to user feedback.   He is a leading expert in script loading and a contributer to the AMD specification.</p>
+<p><a href="https://twitter.com/jrburke" class="twitter-follow-button" target="_blank">Follow @jrburke</a></p>
+<script src="//platform.twitter.com/widgets.js" type="text/javascript"></script>
+
+<h2 id="getting-started">Getting started</h2>
+<p>To easily understand this tutorial you should jump straight into the example code base.</p>
+<p><a href="https://github.com/thomasdavis/backbonetutorials/tree/gh-pages/examples/modular-backbone" target="_blank">Example Codebase</a></p>
+<p><a href="http://backbonetutorials.com/examples/modular-backbone" target="_blank">Example Demo</a></p>
+<p>The tutorial is only loosely coupled with the example and you will find the example to be more comprehensive.</p>
+<p>If you would like to see how a particular use case would be implemented please visit the GitHub page and create an issue.(Example Request: How to do nested views).</p>
+<p>The example isn&apos;t super fleshed out but should give you a vague idea.</p>
+<h2 id="example-file-structure">Example File Structure</h2>
+<p>There are many different ways to lay out your files and I believe it is actually dependent on the size and type of the project.   In the example below views and templates are mirrored in file structure.  Collections and Models are categorized into folders kind of like an ORM.</p>
+<pre><code>/* File Structure
+&#x251C;&#x2500;&#x2500; imgs
+&#x251C;&#x2500;&#x2500; css
+&#x2502;   &#x2514;&#x2500;&#x2500; style.css
+&#x251C;&#x2500;&#x2500; templates
+&#x2502;   &#x251C;&#x2500;&#x2500; projects
+&#x2502;   &#x2502;   &#x251C;&#x2500;&#x2500; list.html
+&#x2502;   &#x2502;   &#x2514;&#x2500;&#x2500; edit.html
+&#x2502;   &#x2514;&#x2500;&#x2500; users
+&#x2502;       &#x251C;&#x2500;&#x2500; list.html
+&#x2502;       &#x2514;&#x2500;&#x2500; edit.html
+&#x251C;&#x2500;&#x2500; js
+&#x2502;   &#x251C;&#x2500;&#x2500; libs
+&#x2502;   &#x2502;   &#x251C;&#x2500;&#x2500; jquery
+&#x2502;   &#x2502;   &#x2502;   &#x251C;&#x2500;&#x2500; jquery.min.js
+&#x2502;   &#x2502;   &#x251C;&#x2500;&#x2500; backbone
+&#x2502;   &#x2502;   &#x2502;   &#x251C;&#x2500;&#x2500; backbone.min.js
+&#x2502;   &#x2502;   &#x2514;&#x2500;&#x2500; underscore
+&#x2502;   &#x2502;   &#x2502;   &#x251C;&#x2500;&#x2500; underscore.min.js
+&#x2502;   &#x251C;&#x2500;&#x2500; models
+&#x2502;   &#x2502;   &#x251C;&#x2500;&#x2500; users.js
+&#x2502;   &#x2502;   &#x2514;&#x2500;&#x2500; projects.js
+&#x2502;   &#x251C;&#x2500;&#x2500; collections
+&#x2502;   &#x2502;   &#x251C;&#x2500;&#x2500; users.js
+&#x2502;   &#x2502;   &#x2514;&#x2500;&#x2500; projects.js
+&#x2502;   &#x251C;&#x2500;&#x2500; views
+&#x2502;   &#x2502;   &#x251C;&#x2500;&#x2500; projects
+&#x2502;   &#x2502;   &#x2502;   &#x251C;&#x2500;&#x2500; list.js
+&#x2502;   &#x2502;   &#x2502;   &#x2514;&#x2500;&#x2500; edit.js
+&#x2502;   &#x2502;   &#x2514;&#x2500;&#x2500; users
+&#x2502;   &#x2502;       &#x251C;&#x2500;&#x2500; list.js
+&#x2502;   &#x2502;       &#x2514;&#x2500;&#x2500; edit.js
+&#x2502;   &#x251C;&#x2500;&#x2500; router.js
+&#x2502;   &#x251C;&#x2500;&#x2500; app.js
+&#x2502;   &#x251C;&#x2500;&#x2500; main.js  // Bootstrap
+&#x2502;   &#x251C;&#x2500;&#x2500; order.js //Require.js plugin
+&#x2502;   &#x2514;&#x2500;&#x2500; text.js  //Require.js plugin
+&#x2514;&#x2500;&#x2500; index.html
+
+*/
+</code></pre><p>To continue you must really understand what we are aiming towards as described in the introduction.</p>
+<h2 id="bootstrapping-your-application">Bootstrapping your application</h2>
+<p>Using Require.js we define a single entry point on our index page.
+We should setup any useful containers that might be used by our Backbone views.</p>
+<p><em>Note: The data-main attribute on our single script tag tells Require.js to load the script located at &quot;js/main.js&quot;.  It automatically appends the &quot;.js&quot;</em></p>
+<pre><code>&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;title&gt;Jackie Chan&lt;/title&gt;
+    &lt;!-- Load the script &quot;js/main.js&quot; as our entry point --&gt;
+    &lt;script data-main=&quot;js/main&quot; src=&quot;js/libs/require/require.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;div id=&quot;container&quot;&gt;
+  &lt;div id=&quot;menu&quot;&gt;&lt;/div&gt;
+  &lt;div id=&quot;content&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><p>You should most always end up with quite a light weight index file.   You can serve this off your server and then the rest of your site off a CDN ensuring that everything that can be cached, will be. (You can also now serve the index file off the CDN using Cloudfront)</p>
+<h3 id="what-does-the-bootstrap-look-like">What does the bootstrap look like?</h3>
+<p>Our bootstrap file will be responsible for configuring Require.js and loading initially important dependencies.</p>
+<p>In the example below we configure Require.js to create a shortcut alias to commonly used scripts such as jQuery, Underscore and Backbone.</p>
+<p>Unfortunately Backbone.js isn&apos;t AMD enabled so I downloaded the community managed repository and patched it on <a href="https://github.com/amdjs" target="_blank">amdjs</a>.</p>
+<p>Hopefully if the AMD specification takes off these libraries will add code to allow themselves to be loaded asynchronously.   Due to this inconvenience the bootstrap is not as intuitive as it could be.</p>
+<p>We also request a module called &quot;app&quot;, this will contain the entirety of our application logic.</p>
+<p><em>Note: Modules are loaded relatively to the boot strap and always append with &quot;.js&quot;.   So the module &quot;app&quot; will load &quot;app.js&quot; which is in the same directory as the bootstrap.</em></p>
+<pre><code>// Filename: main.js
+
+// Require.js allows us to configure shortcut alias
+// There usage will become more apparent further along in the tutorial.
+require.config({
+  paths: {
+    jquery: &apos;libs/jquery/jquery&apos;,
+    underscore: &apos;libs/underscore/underscore&apos;,
+    backbone: &apos;libs/backbone/backbone&apos;
+  }
+
+});
+
+require([
+
+  // Load our app module and pass it to our definition function
+  &apos;app&apos;,
+], function(App){
+  // The &quot;app&quot; dependency is passed in as &quot;App&quot;
+  App.initialize();
+});
+</code></pre><h2 id="how-should-we-lay-out-external-scripts">How should we lay out external scripts?</h2>
+<p>Any modules we develop for our application using AMD/Require.js will be asynchronously loaded.</p>
+<p>We have a heavy dependency on jQuery, Underscore and Backbone, unfortunately this libraries are loaded synchronously and also depend on each other existing in the global namespace.</p>
+<h2 id="a-boiler-plate-module">A boiler plate module</h2>
+<p>So before we start developing our application, let&apos;s quickly look over boiler plate code that will be reused quite often.</p>
+<p>For convenience sake I generally keep a &quot;boilerplate.js&quot; in my application root so I can copy it when I need to.</p>
+<pre><code>//Filename: boilerplate.js
+
+define([
+  // These are path alias that we configured in our bootstrap
+  &apos;jquery&apos;,     // lib/jquery/jquery
+  &apos;underscore&apos;, // lib/underscore/underscore
+  &apos;backbone&apos;    // lib/backbone/backbone
+], function($, _, Backbone){
+  // Above we have passed in jQuery, Underscore and Backbone
+  // They will not be accessible in the global scope
+  return {};
+  // What we return here will be used by other modules
+});
+</code></pre><p>The first argument of the define function is our dependency array, in the future we can pass in any modules we like.</p>
+<h2 id="appjs-building-our-applications-main-module">App.js Building our applications main module</h2>
+<p>Our applications main module should always remain light weight.   This tutorial only covers setting up a Backbone Router and initializing it in our main module.</p>
+<p>The router will then load the correct dependencies depending on the current URL.</p>
+<pre><code>// Filename: app.js
+define([
+  &apos;jquery&apos;,
+  &apos;underscore&apos;,
+  &apos;backbone&apos;,
+  &apos;router&apos;, // Request router.js
+], function($, _, Backbone, Router){
+  var initialize = function(){
+    // Pass in our Router module and call it&apos;s initialize function
+    Router.initialize();
+  }
+
+  return {
+    initialize: initialize
+  };
+});
+</code></pre><pre><code>// Filename: router.js
+define([
+  &apos;jquery&apos;,
+  &apos;underscore&apos;,
+  &apos;backbone&apos;,
+  &apos;views/projects/list&apos;,
+  &apos;views/users/list&apos;
+], function($, _, Backbone, ProjectListView, UserListView){
+  var AppRouter = Backbone.Router.extend({
+    routes: {
+      // Define some URL routes
+      &apos;/projects&apos;: &apos;showProjects&apos;,
+      &apos;/users&apos;: &apos;showUsers&apos;,
+
+      // Default
+      &apos;*actions&apos;: &apos;defaultAction&apos;
+    }
+  });
+
+  var initialize = function(){
+    var app_router = new AppRouter;
+    app_router.on(&apos;showProjects&apos;, function(){
+      // Call render on the module we loaded in via the dependency array
+      // &apos;views/projects/list&apos;
+      var projectListView = new ProjectListView();
+      projectListView.render();
+    });
+      // As above, call render on our loaded module
+      // &apos;views/users/list&apos;
+    app_router.on(&apos;showUsers&apos;, function(){
+      var userListView = new UserListView();
+      userListView.render();
+    });
+    app_router.on(&apos;defaultAction&apos;, function(actions){
+      // We have no matching route, lets just log what the URL was
+      console.log(&apos;No route:&apos;, actions);
+    });
+    Backbone.history.start();
+  };
+  return {
+    initialize: initialize
+  };
+});
+</code></pre><h2 id="modularizing-a-backbone-view">Modularizing a Backbone View</h2>
+<p>Backbone views usually interact with the DOM. Using our new modular system we can load in JavaScript templates using the Require.js text! plug-in.</p>
+<pre><code>// Filename: views/project/list
+define([
+  &apos;jquery&apos;,
+  &apos;underscore&apos;,
+  &apos;backbone&apos;,
+  // Using the Require.js text! plugin, we are loaded raw text
+  // which will be used as our views primary template
+  &apos;text!templates/project/list.html&apos;
+], function($, _, Backbone, projectListTemplate){
+  var ProjectListView = Backbone.View.extend({
+    el: $(&apos;#container&apos;),
+    render: function(){
+      // Using Underscore we can compile our template with data
+      var data = {};
+      var compiledTemplate = _.template( projectListTemplate, data );
+      // Append our compiled template to this Views &quot;el&quot;
+      this.$el.append( compiledTemplate );
+    }
+  });
+  // Our module now returns our view
+  return ProjectListView;
+});
+</code></pre><p>JavaScript templating allows us to separate the design from the application logic by placing all our HTML in the templates folder.</p>
+<h2 id="modularizing-a-collection-model-and-view">Modularizing a Collection, Model and View</h2>
+<p>Now we put it altogether by chaining up a Model, Collection and View which is a typical scenario when building a Backbone.js application.</p>
+<p>First we will define our model</p>
+<pre><code>// Filename: models/project
+define([
+  &apos;underscore&apos;,
+  &apos;backbone&apos;
+], function(_, Backbone){
+  var ProjectModel = Backbone.Model.extend({
+    defaults: {
+      name: &quot;Harry Potter&quot;
+    }
+  });
+  // Return the model for the module
+  return ProjectModel;
+});
+</code></pre><p>Now that we have a model, our collection module can depend on it.  We will set the &quot;model&quot; attribute of our collection to the loaded module.  Backbone.js offers great benefits when doing this.</p>
+<blockquote>
+<p>Collection.model: Override this property to specify the model class that the collection contains. If defined, you can pass raw attributes objects (and arrays) to add, create, and reset, and the attributes will be converted into a model of the proper type.</p>
+</blockquote>
+<pre><code>// Filename: collections/projects
+define([
+  &apos;underscore&apos;,
+  &apos;backbone&apos;,
+  // Pull in the Model module from above
+  &apos;models/project&apos;
+], function(_, Backbone, ProjectModel){
+  var ProjectCollection = Backbone.Collection.extend({
+    model: ProjectModel
+  });
+  // You don&apos;t usually return a collection instantiated
+  return ProjectCollection;
+});
+</code></pre><p>Now we can simply depend on our collection in our view and pass it to our JavaScript template.</p>
+<pre><code>// Filename: views/projects/list
+define([
+  &apos;jquery&apos;,
+  &apos;underscore&apos;,
+  &apos;backbone&apos;,
+  // Pull in the Collection module from above
+  &apos;collections/projects&apos;,
+  &apos;text!templates/projects/list.html&apos;
+], function($, _, Backbone, ProjectsCollection, projectsListTemplate){
+  var ProjectListView = Backbone.View.extend({
+    el: $(&quot;#container&quot;),
+    initialize: function(){
+      this.collection = new ProjectsCollection();
+      this.collection.add({ name: &quot;Ginger Kid&quot;});
+      // Compile the template using Underscores micro-templating
+      var compiledTemplate = _.template( projectsListTemplate, { projects: this.collection.models } );
+      this.$el.html(compiledTemplate);
+    }
+  });
+  // Returning instantiated views can be quite useful for having &quot;state&quot;
+  return ProjectListView;
+});
+</code></pre><h2 id="conclusion">Conclusion</h2>
+<p>Looking forward to feedback so I can turn this post and example into quality references on building modular JavaScript applications.</p>
+<p>Get in touch with me on twitter, comments or GitHub!</p>
+<h3 id="relevant-links">Relevant Links</h3>
+<ul>
+<li><a href="http://bocoup.com/weblog/organizing-your-backbone-js-application-with-modules/" target="_blank">Organizing Your Backbone.js Application With Modules</a></li>
+</ul>
+<h3 id="contributors">Contributors</h3>
+<ul>
+<li><a href="https://github.com/dzejkej" target="_blank">Jakub Kozisek</a> (created modular-backbone-updated containing updated libs with AMD support)</li>
+</ul>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../intermediate/seo-for-single-page-apps.html" class="navigation navigation-prev " aria-label="Previous page: SEO for single page applications"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../intermediate/cross-domain-sessions.html" class="navigation navigation-next " aria-label="Next page: Cross-domain Backbone.js with sessions using CORS Lightweight"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

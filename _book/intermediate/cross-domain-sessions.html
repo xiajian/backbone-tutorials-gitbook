@@ -1,0 +1,657 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Cross-domain Backbone.js with sessions using CORS Lightweight | 介绍</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.6.7">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-highlight/website.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-search/search.css">
+        
+    
+        
+        <link rel="stylesheet" href="../gitbook/plugins/gitbook-plugin-fontsettings/website.css">
+        
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../intermediate/infinite-scrolling.html" />
+    
+    
+    <link rel="prev" href="../intermediate/organizing-backbone-using-modules.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book"
+        data-level="2.4"
+        data-chapter-title="Cross-domain Backbone.js with sessions using CORS Lightweight"
+        data-filepath="intermediate/cross-domain-sessions.md"
+        data-basepath=".."
+        data-revision="Sat Apr 23 2016 21:50:51 GMT+0800 (CST)"
+        data-innerlanguage="">
+    
+
+<div class="book-summary">
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+            
+            
+
+            
+
+            
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Introduction
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" >
+            
+            <span><b>1.</b> Beginners</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="beginner/why-would-you-use-backbone.html">
+            
+                
+                    <a href="../beginner/why-would-you-use-backbone.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        Why would you use Backbone.js?
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="beginner/what-is-a-model.html">
+            
+                
+                    <a href="../beginner/what-is-a-model.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        What is a model?
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="beginner/what-is-a-view.html">
+            
+                
+                    <a href="../beginner/what-is-a-view.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        What is a view?
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="beginner/what-is-a-router.html">
+            
+                
+                    <a href="../beginner/what-is-a-router.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        What is a router?
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="beginner/what-is-a-collection.html">
+            
+                
+                    <a href="../beginner/what-is-a-collection.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.5.</b>
+                        
+                        What is a collection?
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" >
+            
+            <span><b>2.</b> Intermediate</span>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="intermediate/real-time-backbone-with-pubnub.html">
+            
+                
+                    <a href="../intermediate/real-time-backbone-with-pubnub.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        Real-Time Backbone With PubNub
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="intermediate/seo-for-single-page-apps.html">
+            
+                
+                    <a href="../intermediate/seo-for-single-page-apps.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        SEO for single page applications
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="intermediate/organizing-backbone-using-modules.html">
+            
+                
+                    <a href="../intermediate/organizing-backbone-using-modules.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        Organizing your application using Modules (require.js)
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.4" data-path="intermediate/cross-domain-sessions.html">
+            
+                
+                    <a href="../intermediate/cross-domain-sessions.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        Cross-domain Backbone.js with sessions using CORS Lightweight
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="intermediate/infinite-scrolling.html">
+            
+                
+                    <a href="../intermediate/infinite-scrolling.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.</b>
+                        
+                        Infinite Scrolling using Twitter API
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="intermediate/nodejs-restify-mongodb-mongoose.html">
+            
+                
+                    <a href="../intermediate/nodejs-restify-mongodb-mongoose.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.6.</b>
+                        
+                        Simple example - Node.js, Restify, MongoDb and Mongoose
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+            
+            <li class="divider"></li>
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header" role="navigation">
+    <!-- Actions Left -->
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >介绍</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1" role="main">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="crossdomain-backbonejs-with-sessions-using-cors">Cross-domain Backbone.js with sessions using CORS</h1>
+<p><strong> This tutorial is a proof of concept and needs to be checked for security flaws </strong></p>
+<p>This tutorial will teach you how to completely separate the server and client allowing for developers to work with freedom in their respective areas.</p>
+<p>On a personal note, I consider this development practice highly desirable and encourage others to think of the possible benefits but the security still needs to be proved.</p>
+<blockquote>
+<p>Cross-Origin Resource Sharing (CORS) is a specification that enables a truly open access across domain-boundaries. - <a href="http://enable-cors.org/" target="_blank">enable-cors.org</a></p>
+</blockquote>
+<p><strong>Some benefits include</strong></p>
+<ul>
+<li>The client and back end exist independently regardless of where they are each hosted and built.</li>
+<li>Due to the separation of concerns, testing now becomes easier and more controlled.</li>
+<li>Develop only one API on the server, your front-end could be outsourced or built by a in-house team.</li>
+<li>As a front-end developer you can host the client anywhere.</li>
+<li>This separation enforces that the API be built robustly, documented, collaboratively and versioned.</li>
+</ul>
+<p><strong> Cons of this tutorial </strong></p>
+<ul>
+<li>This tutorial doesn&apos;t explain how to perform this with cross browser support. CORS headers aren&apos;t supported by Opera and IE 6/7. Though it is do-able using <a href="http://easyxdm.net/wp/" target="_blank">easyXDM</a></li>
+<li>Security is somewhat addressed but maybe a more thorough security expert can chime in.</li>
+</ul>
+<h2 id="security">Security</h2>
+<ul>
+<li>Don&apos;t allow GET request to change data, only retrieve.</li>
+<li>Whitelist your allowed domains (see <a href="https://github.com/thomasdavis/backbonetutorials/blob/gh-pages/examples/cross-domain/server.js" target="_blank">server.js</a>)</li>
+<li>Protect again <a href="http://blog.opensecurityresearch.com/2012/02/json-csrf-with-parameter-padding.html" target="_blank">JSON padding</a></li>
+</ul>
+<h2 id="getting-started">Getting started</h2>
+<p>To easily understand this tutorial you should jump straight into the example code base.</p>
+<p>Host the codebase on a simple HTTP server such that the domain is <code>localhost</code> with port 80 hidden.</p>
+<p><a href="https://github.com/thomasdavis/backbonetutorials/tree/gh-pages/examples/cross-domain" target="_blank">Example Codebase</a></p>
+<p><a href="http://backbonetutorials.com/examples/cross-domain/" target="_blank">Example Demo</a></p>
+<p>This tutorial focuses on building a flexible Session model to control session state in your application.</p>
+<h2 id="checking-session-state-at-first-load">Checking session state at first load</h2>
+<p>Before starting any routes, we should really know whether the user is authenticated. This will allow us to load the appropriate views. We will simply wrap our <code>Backbone.history.start</code> in a callback that executes after <code>Session.getAuth</code> has checked the server. We will jump into our Session model next.</p>
+<pre><code>define([
+  &apos;jquery&apos;,
+  &apos;underscore&apos;,
+  &apos;backbone&apos;,
+  &apos;vm&apos;,
+  &apos;events&apos;,
+  &apos;models/session&apos;,
+  &apos;text!templates/layout.html&apos; 
+], function($, _, Backbone, Vm, Events, Session, layoutTemplate){
+  var AppView = Backbone.View.extend({
+    el: &apos;.container&apos;,
+    initialize: function () {
+        $.ajaxPrefilter( function( options, originalOptions, jqXHR ) {
+        // Your server goes below
+        //options.url = &apos;http://localhost:8000&apos; + options.url;
+        options.url = &apos;http://cross-domain.nodejitsu.com&apos; + options.url;
+      });
+
+    },
+    render: function () {
+      var that = this;
+      $(this.el).html(layoutTemplate);
+      // This is the entry point to your app, therefore
+      // when the user refreshes the page we should
+      // really know if they&apos;re authed. We will give it
+      // A call back when we know what the auth status is
+      Session.getAuth(function () {
+        Backbone.history.start();
+      })
+    } 
+    });
+  return AppView;
+});
+</code></pre><p><em>Note: We have used jQuery <code>ajaxPrefilter</code> to hook into all AJAX requests before they are executed. This is where we specify what server we want the application to hit.</em></p>
+<h2 id="an-example-session-model">An example Session model</h2>
+<p>This is a very light weight Session model which handles most situations. Read through the code and comments below. The model simply has a login, logout and check function. Again we have hooked into jQuery <code>ajaxPrefilter</code> to allow for csrf tokens and also telling jQuery to send cookies with the <code>withCredentials</code> property. The model relies heavily on it&apos;s <code>auth</code> property. Throughout your application, each view can simply bind to <code>change:auth</code> on the Session model and react accordingly. Because we return this AMD module instantiated using the new keyword, then it will keep state throughout the page. (This may not be best practice but it&apos;s highly convenient)</p>
+<pre><code>// views/app.js
+define([
+  &apos;underscore&apos;,
+  &apos;backbone&apos;
+], function(_, Backbone) {
+  var SessionModel = Backbone.Model.extend({
+
+    urlRoot: &apos;/session&apos;,
+    initialize: function () {
+      var that = this;
+      // Hook into jquery
+      // Use withCredentials to send the server cookies
+      // The server must allow this through response headers
+      $.ajaxPrefilter( function( options, originalOptions, jqXHR ) {
+        options.xhrFields = {
+          withCredentials: true
+        };
+        // If we have a csrf token send it through with the next request
+        if(typeof that.get(&apos;_csrf&apos;) !== &apos;undefined&apos;) {
+          jqXHR.setRequestHeader(&apos;X-CSRF-Token&apos;, that.get(&apos;_csrf&apos;));
+        }
+      });
+    },
+    login: function(creds) {
+      // Do a POST to /session and send the serialized form creds
+      this.save(creds, {
+         success: function () {}
+      });
+    },
+    logout: function() {
+      // Do a DELETE to /session and clear the clientside data
+      var that = this;
+      this.destroy({
+        success: function (model, resp) {
+          model.clear()
+          model.id = null;
+          // Set auth to false to trigger a change:auth event
+          // The server also returns a new csrf token so that
+          // the user can relogin without refreshing the page
+          that.set({auth: false, _csrf: resp._csrf});
+
+        }
+      });      
+    },
+    getAuth: function(callback) {
+      // getAuth is wrapped around our router
+      // before we start any routers let us see if the user is valid
+      this.fetch({
+          success: callback
+      });
+    }
+  });
+  return new SessionModel();
+
+});
+</code></pre><p><em>Note: This session model is missing one useful feature. If a user looses auth when navigating your application then the application should set {auth: false} on this model. To do this, in the <code>ajaxPrefilter</code> edit outgoing <code>success</code> functions to check if the server response was {auth: false} and then call the original <code>success()</code> function.</em></p>
+<h2 id="hooking-up-views-to-listen-to-changes-in-auth">Hooking up views to listen to changes in <code>auth</code></h2>
+<p>Now that we have a Session model, let&apos;s hook up our <code>login/logout</code> view to listen to changes in <code>auth</code>. When creating the view we use <code>on</code> to bind a listener to the <code>auth</code> attribute of our model. Everytime it changes we will re-render the view which will conditionally load a template depending on the value of <code>Session.get(&apos;auth&apos;)</code>.</p>
+<pre><code>// models/session.js
+define([
+  &apos;jquery&apos;,
+  &apos;underscore&apos;,
+  &apos;backbone&apos;,
+  &apos;models/session&apos;,
+  &apos;text!templates/example/login.html&apos;,
+  &apos;text!templates/example/logout.html&apos;
+], function($, _, Backbone, Session, exampleLoginTemplate, exampleLogoutTemplate){
+  var ExamplePage = Backbone.View.extend({
+    el: &apos;.page&apos;,
+    initialize: function () {
+      var that = this;
+      // Bind to the Session auth attribute so we
+      // make our view act recordingly when auth changes
+      Session.on(&apos;change:auth&apos;, function (session) {
+          that.render();
+      });
+    },
+    render: function () {
+      // Simply choose which template to choose depending on
+      // our Session models auth attribute
+      if(Session.get(&apos;auth&apos;)){
+        this.$el.html(_.template(exampleLogoutTemplate, {username: Session.get(&apos;username&apos;)}));
+      } else {
+        this.$el.html(exampleLoginTemplate); 
+      }
+    },
+    events: {
+      &apos;submit form.login&apos;: &apos;login&apos;, // On form submission
+      &apos;click .logout&apos;: &apos;logout&apos;
+    },
+    login: function (ev) {
+      // Disable the button
+      $(&apos;[type=submit]&apos;, ev.currentTarget).val(&apos;Logging in&apos;).attr(&apos;disabled&apos;, &apos;disabled&apos;);
+      // Serialize the form into an object using a jQuery plgin
+      var creds = $(ev.currentTarget).serializeObject();
+      Session.login(creds);
+      return false;
+    },
+    logout: function (ev) {
+      // Disable the button
+      $(ev.currentTarget).text(&apos;Logging out&apos;).attr(&apos;disabled&apos;, &apos;disabled&apos;);
+      Session.logout();
+    }
+  });
+  return ExamplePage;
+});
+</code></pre><p><em>Note: <code>.serializeObject</code> is not a native jQuery function and I have included it as <a href="https://github.com/thomasdavis/backbonetutorials/blob/gh-pages/examples/cross-domain/js/views/app.js" target="_blank">app.js</a> in the demo folder. <code>creds</code> can be an object of any variation of inputs, regardless it will be converted to JSON and posted to the server like any normal Backbone model.</em></p>
+<p>Here are the templates we are using for our login view</p>
+<pre><code>&lt;!-- templates/example/login.html --&gt;
+&lt;form class=&quot;login&quot;&gt;
+    &lt;label for=&quot;&quot;&gt;Username&lt;/label&gt;
+    &lt;input name=&quot;username&quot; type=&quot;text&quot; required autofocus&gt;
+    &lt;input type=&quot;submit&quot; id=&quot;submit&quot; value=&quot;Login&quot;&gt;
+&lt;/form&gt;
+
+&lt;!-- templates/example/logout.html --&gt;
+&lt;p&gt;Hello, &lt;%= username %&gt;. Time to logout?&lt;/p&gt;
+&lt;button class=&quot;logout&quot;&gt;Logout&lt;/button&gt;
+</code></pre><p>This wraps up setting up the client, there are some notable points to make sure this technique works.</p>
+<ul>
+<li>You must use <code>withCredentials</code> supplied by jQuery - session.js</li>
+<li>You must send your request with csrf tokens for security - session.js</li>
+<li>You should wrap your applications entry pointer (router in this example) in a check auth function - app.js</li>
+<li>You must point your application at the right server - app.js</li>
+</ul>
+<h2 id="building-a-compatible-server">Building a compatible server</h2>
+<p>This tutorial uses node.js, express.js and a modified csrf.js library. An example server.js file exist in the <code>examples/cross-domain</code> folder. When inside the folder simply type <code>npm install -d</code> to install the dependencies and then <code>node server.js</code> to start the server. Again, make sure your <code>app.js</code> points at the correct server.</p>
+<p>The server has to do a few things;</p>
+<ul>
+<li>Allow CORS request</li>
+<li>Implement csrf protection</li>
+<li>Allow jQuery to send credentials</li>
+<li>Set a whitelist of allowed domains</li>
+<li>Configure the correct response headers</li>
+</ul>
+<p>To save you sometime here are some gotchas;</p>
+<ul>
+<li>When sending <code>withCredentials</code> you must set correct response header <code>Access-Control-Allow-Credentials: true</code>. Also as a security policy browsers do not allow <code>Access-Control-Allow-Origin</code> to be set to <code>*</code>. So the origin of the request has to be known and trusted, so in the example below we use an of white listed domains.</li>
+<li>jQuery ajax will trigger the browser to send these headers to enforce security <code>origin, x-requested-with, accept</code> so our server must allow them.</li>
+<li>The browser might send out a <code>pre-flight</code> request to verify that it can talk to the server. The server must return <code>200 OK</code> on these  <code>pre-flight</code> request.</li>
+</ul>
+<p>Be sure to read this Mozilla <a href="http://hacks.mozilla.org/2009/07/cross-site-xmlhttprequest-with-cors/" target="_blank">documentation</a> on the above.</p>
+<h2 id="example-node-server">Example node server</h2>
+<p>This server below implements everything we have talked about so far. It should be relatively easy to see how would translate into other frameworks and languages. <code>app.configure</code> runs the specified libraries against every request. We have told the server that on each request it should check the csrf token and check if the origin domain is white-listed. If so we edit each request to contain the appropriate headers.</p>
+<p>This server has 3 endpoints, that are pseudo-restful;</p>
+<ul>
+<li>POST /session - Login - Sets the session username and returns a csrf token for the user to use</li>
+<li>DELETE /session - Logout - Destroys the session and regenerates a new csrf token if the user wants to re-login</li>
+<li>GET /session - Checks Auth - Simply returns if auth is true or false, if true then also returns some session details</li>
+</ul>
+<pre><code>var express = require(&apos;express&apos;);
+
+var connect = require(&apos;connect&apos;);
+// Custom csrf library
+var csrf = require(&apos;./csrf&apos;);
+
+var app = express.createServer();
+
+var allowCrossDomain = function(req, res, next) {
+  // Added other domains you want the server to give access to
+  // WARNING - Be careful with what origins you give access to
+  var allowedHost = [
+    &apos;http://backbonetutorials.com&apos;,
+    &apos;http://localhost&apos;
+  ];
+
+  if(allowedHost.indexOf(req.headers.origin) !== -1) {
+    res.header(&apos;Access-Control-Allow-Credentials&apos;, true);
+    res.header(&apos;Access-Control-Allow-Origin&apos;, req.headers.origin)
+    res.header(&apos;Access-Control-Allow-Methods&apos;, &apos;GET,PUT,POST,DELETE,OPTIONS&apos;);
+    res.header(&apos;Access-Control-Allow-Headers&apos;, &apos;X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version&apos;);
+    next();
+  } else {
+    res.send({auth: false});
+  }
+}
+
+app.configure(function() {
+    app.use(express.cookieParser());
+    app.use(express.session({ secret: &apos;thomasdavislovessalmon&apos; }));
+    app.use(express.bodyParser());
+    app.use(allowCrossDomain);
+    app.use(csrf.check);
+});
+
+app.get(&apos;/session&apos;, function(req, res){ 
+  // This checks the current users auth
+  // It runs before Backbones router is started
+  // we should return a csrf token for Backbone to use
+  if(typeof req.session.username !== &apos;undefined&apos;){
+    res.send({auth: true, id: req.session.id, username: req.session.username, _csrf: req.session._csrf});
+  } else {
+    res.send({auth: false, _csrf: req.session._csrf});
+  }
+});
+
+app.post(&apos;/session&apos;, function(req, res){  
+  // Login
+  // Here you would pull down your user credentials and match them up
+  // to the request
+  req.session.username = req.body.username;
+  res.send({auth: true, id: req.session.id, username: req.session.username});
+});
+
+app.del(&apos;/session/:id&apos;, function(req, res, next){  
+  // Logout by clearing the session
+  req.session.regenerate(function(err){
+    // Generate a new csrf token so the user can login again
+    // This is pretty hacky, connect.csrf isn&apos;t built for rest
+    // I will probably release a restful csrf module
+    csrf.generate(req, res, function () {
+      res.send({auth: false, _csrf: req.session._csrf});    
+    });
+  });  
+});
+
+app.listen(8000);
+</code></pre><p><em>Note: I wrote a custom csrf module for this which can be found in the example directory. It&apos;s based of connects and uses the <code>crypto</code> library.   I didn&apos;t spend much time on it but other traditional csrf modules won&apos;t work because they aren&apos;t exactly built for this implementation technique.</em></p>
+<h2 id="conclusion">Conclusion</h2>
+<p>This approach really hammers in the need for a well documented and designed API. A powerful API will let you do application iterations with ease.</p>
+<p>Again, it would be great for some more analysis of the security model.</p>
+<p>Enjoy using Backbone.js cross domain!</p>
+<p><em>I cannot get passed the spam filter on HackerNews so feel free to submit this tutorial</em></p>
+<p><a href="https://github.com/thomasdavis/backbonetutorials/tree/gh-pages/examples/cross-domain" target="_blank">Example Codebase</a></p>
+<p><a href="http://backbonetutorials.com/examples/cross-domain/" target="_blank">Example Demo</a></p>
+<h3 id="relevant-links">Relevant Links</h3>
+<ul>
+<li><a href="http://hacks.mozilla.org/2009/07/cross-site-xmlhttprequest-with-cors/" target="_blank">cross-site xmlhttprequest with CORS</a></li>
+<li><a href="http://www.w3.org/TR/cors/" target="_blank">Cross-Origin Resource Sharing</a></li>
+<li><a href="http://www.kendoui.com/blogs/teamblog/posts/11-10-04/using_cors_with_all_modern_browsers.aspx" target="_blank">Using CORS with All (Modern) Browsers</a></li>
+</ul>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../intermediate/organizing-backbone-using-modules.html" class="navigation navigation-prev " aria-label="Previous page: Organizing your application using Modules (require.js)"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../intermediate/infinite-scrolling.html" class="navigation navigation-next " aria-label="Next page: Infinite Scrolling using Twitter API"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/lunr.min.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-search/search.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-sharing/buttons.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-fontsettings/buttons.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>
